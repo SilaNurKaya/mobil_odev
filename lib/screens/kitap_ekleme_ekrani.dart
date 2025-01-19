@@ -92,8 +92,28 @@ class _KitapEklemeEkraniState extends State<KitapEklemeEkrani> {
         yayinTarihi: _yayinTarihiKontrol.text,
         tur: _turKontrol.text,
       );
-      await Veritabani.instance.kitapEkle(kitap);
-      Navigator.pop(context);
+
+      try {
+        await Veritabani.instance.kitapEkle(kitap);
+        // Başarı durumunda SnackBar göster
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Kitap başarıyla kaydedildi!'),
+            backgroundColor: Colors.green,
+            duration: Duration(seconds: 3),
+          ),
+        );
+        Navigator.pop(context); // Geri dön
+      } catch (e) {
+        // Hata durumunda SnackBar göster
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Kaydedilirken bir hata oluştu: $e'),
+            backgroundColor: Colors.red,
+            duration: Duration(seconds: 3),
+          ),
+        );
+      }
     }
   }
 
