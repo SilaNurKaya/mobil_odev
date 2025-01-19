@@ -6,34 +6,42 @@ class KitapFormAlani extends StatelessWidget {
   final String? Function(String?)? validator;
 
   const KitapFormAlani({
-    Key? key,
+    super.key,
     required this.label,
     required this.controller,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12.0), // Daha fazla boşluk
+      padding: const EdgeInsets.symmetric(vertical: 12.0), // Boşluk arttırıldı
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(
           labelText: label,
-          labelStyle: TextStyle(color: Colors.deepPurple), // Etiket rengi
+          labelStyle: TextStyle(
+            color: const Color.fromARGB(117, 0, 0, 0), // Etiket rengi
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16), // Yuvarlatılmış köşeler
-            borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+            borderSide:
+                BorderSide(color: const Color.fromARGB(9, 20, 11, 8), width: 2),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: BorderSide(color: Colors.deepOrange, width: 2),
+            borderSide:
+                BorderSide(color: const Color.fromARGB(255, 0, 0, 0), width: 2),
           ),
           filled: true,
           fillColor: Colors.grey[200], // Arka plan rengi
         ),
         style: TextStyle(
-            color: Colors.black87, fontSize: 16), // Yazı rengi ve büyüklüğü
+          color: const Color.fromARGB(246, 0, 0, 0),
+          fontSize: 16, // Yazı boyutu
+        ),
         validator: validator ??
             (value) {
               if (value == null || value.isEmpty) {

@@ -5,6 +5,8 @@ import '../helpers/database.dart';
 import 'kitap_ekleme_ekrani.dart';
 
 class KitapListesiEkrani extends StatefulWidget {
+  const KitapListesiEkrani({super.key});
+
   @override
   _KitapListesiEkraniState createState() => _KitapListesiEkraniState();
 }
@@ -14,7 +16,13 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Kitap Arşivi'),
+        title: Text(
+          'Kitap Arşivi',
+          style: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold), // Başlık için stil
+        ),
+        backgroundColor:
+            const Color.fromARGB(145, 102, 201, 216), // Başlık arka plan rengi
       ),
       body: FutureBuilder<List<Kitap>>(
         future: Veritabani.instance.tumKitaplariGetir(),
@@ -27,7 +35,11 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
             return Center(
               child: Text(
                 'Henüz kitap eklenmemiş',
-                style: Theme.of(context).textTheme.titleMedium,
+                style: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ), // Stilini burada belirledik
               ),
             );
           }
@@ -55,7 +67,13 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
           ).then((_) => setState(() {}));
         },
         icon: Icon(Icons.add),
-        label: Text('Kitap Ekle'),
+        label: Text(
+          'Kitap Ekle',
+          style: TextStyle(
+              fontSize: 16, fontWeight: FontWeight.bold), // Yüzey metni stili
+        ),
+        backgroundColor: const Color.fromRGBO(
+            255, 183, 156, 229), // Floating button için renk
       ),
     );
   }
