@@ -21,7 +21,6 @@ class KitapListeElemani extends StatelessWidget {
       elevation: 4,
       child: InkWell(
         onTap: () {
-          // Detayların gösterileceği bir dialog veya ekran açılır
           _kitapDetayGoster(context);
         },
         child: ListTile(

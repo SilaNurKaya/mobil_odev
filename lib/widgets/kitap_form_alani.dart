@@ -15,18 +15,18 @@ class KitapFormAlani extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12.0), // Boşluk arttırıldı
+      padding: const EdgeInsets.symmetric(vertical: 12.0),
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(
           labelText: label,
           labelStyle: TextStyle(
-            color: const Color.fromARGB(117, 0, 0, 0), // Etiket rengi
+            color: const Color.fromARGB(117, 0, 0, 0),
             fontWeight: FontWeight.bold,
             fontSize: 16,
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16), // Yuvarlatılmış köşeler
+            borderRadius: BorderRadius.circular(16),
             borderSide:
                 BorderSide(color: const Color.fromARGB(9, 20, 11, 8), width: 2),
           ),
@@ -36,11 +36,11 @@ class KitapFormAlani extends StatelessWidget {
                 BorderSide(color: const Color.fromARGB(255, 0, 0, 0), width: 2),
           ),
           filled: true,
-          fillColor: Colors.grey[200], // Arka plan rengi
+          fillColor: Colors.grey[200],
         ),
         style: TextStyle(
           color: const Color.fromARGB(246, 0, 0, 0),
-          fontSize: 16, // Yazı boyutu
+          fontSize: 16,
         ),
         validator: validator ??
             (value) {

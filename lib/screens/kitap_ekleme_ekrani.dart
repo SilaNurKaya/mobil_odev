@@ -95,7 +95,6 @@ class _KitapEklemeEkraniState extends State<KitapEklemeEkrani> {
 
       try {
         await Veritabani.instance.kitapEkle(kitap);
-        // Başarı durumunda SnackBar göster
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Kitap başarıyla kaydedildi!'),
@@ -105,7 +104,6 @@ class _KitapEklemeEkraniState extends State<KitapEklemeEkrani> {
         );
         Navigator.pop(context); // Geri dön
       } catch (e) {
-        // Hata durumunda SnackBar göster
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Kaydedilirken bir hata oluştu: $e'),

@@ -18,11 +18,9 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
       appBar: AppBar(
         title: Text(
           'Kitap Arşivi',
-          style: TextStyle(
-              fontSize: 24, fontWeight: FontWeight.bold), // Başlık için stil
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        backgroundColor:
-            const Color.fromARGB(145, 102, 201, 216), // Başlık arka plan rengi
+        backgroundColor: const Color.fromARGB(145, 102, 201, 216),
       ),
       body: FutureBuilder<List<Kitap>>(
         future: Veritabani.instance.tumKitaplariGetir(),
@@ -39,7 +37,7 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
                   color: Colors.grey[700],
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                ), // Stilini burada belirledik
+                ),
               ),
             );
           }
@@ -69,11 +67,9 @@ class _KitapListesiEkraniState extends State<KitapListesiEkrani> {
         icon: Icon(Icons.add),
         label: Text(
           'Kitap Ekle',
-          style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.bold), // Yüzey metni stili
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: const Color.fromRGBO(
-            255, 183, 156, 229), // Floating button için renk
+        backgroundColor: const Color.fromRGBO(255, 183, 156, 229),
       ),
     );
   }
