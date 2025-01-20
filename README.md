@@ -15,6 +15,10 @@ Bu proje, C# dilinde geliştirilen bir uygulamadır. SqfLite veri tabanı kullan
 
 [Proje Tanıtım Videosu](https://youtu.be/2CIC4OisHEE)
 
+![Boş ekran hali](Screenshots/Ekran görüntüsü 2025-01-20 221917.png)
+![Bilgi girme kısmı](Screenshots/Ekran görüntüsü 2025-01-20 221930.png)
+![Bilgi girilmemesi durumu](Screenshots/Ekran görüntüsü 2025-01-20 221942.png)
+
 
 # odev
 
