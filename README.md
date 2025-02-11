@@ -7,7 +7,7 @@ Bu proje, Sıla Nur Kaya ve Deniz Çalışkan tarafından geliştirilmiştir.
 - **Sıla Nur Kaya**  
   Okul Numarası: 132330013  
 - **Deniz Çalışkan**  
-  Okul Numarası: 132330036  Github Linki: https://github.com/raven7137
+  Okul Numarası: 132330036  /Github Linki: https://github.com/raven7137
 
 ## Proje Hakkında
 
